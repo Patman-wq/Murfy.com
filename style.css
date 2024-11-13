@@ -15,7 +15,7 @@ body {
     justify-content: flex-start;
     align-items: center;
     min-height: 100vh;
-    padding-top: 80px;
+    padding-top: 80px; /* Espaço adequado para o cabeçalho */
 }
 
 /* Cabeçalho fixo no topo */
@@ -25,7 +25,7 @@ header {
     left: 0;
     width: 100%;
     background-color: #261F1F;
-    padding: 20px;
+    padding: 15px; /* Ajuste no padding */
     text-align: center;
     z-index: 1000;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
@@ -34,12 +34,13 @@ header {
     flex-direction: column;
     align-items: center;
     gap: 10px;
+    height: auto;
 }
 
 /* Logo no cabeçalho */
 header .logo {
-    width: 75px;
-    height: 75px;
+    width: 70px; /* Ajuste no tamanho da logo */
+    height: 70px; /* Ajuste no tamanho da logo */
     border-radius: 50%;
     object-fit: cover;
 }
@@ -48,7 +49,7 @@ header .logo {
 header nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 15px;
     margin-top: 10px;
 }
 
@@ -82,6 +83,104 @@ h2 {
     font-weight: 700;
     margin-bottom: 20px;
     color: #f4f4f4;
+}
+
+/* Seção Sobre o Murfy */
+#home {
+    margin-top: 20px; /* Espaço superior ajustado */
+    font-size: 18px;
+    color: #f4f4f4;
+}
+
+/* Rodapé */
+footer {
+    margin-top: 60px;
+    background-color: #261F1F;
+    color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+    /* Ajusta o cabeçalho para telas menores */
+    header {
+        padding: 10px;
+    }
+
+    header .logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    header nav ul {
+        gap: 10px;
+    }
+
+    header nav ul li a {
+        font-size: 14px;
+    }
+
+    .main-content {
+        padding: 20px;
+        margin-top: 90px; /* Ajuste para o cabeçalho menor */
+    }
+
+    #home {
+        font-size: 16px; /* Tamanho de fonte ajustado para dispositivos móveis */
+    }
+}
+
+/* Outras Músicas */
+.other-music {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.other-music-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 30px;
+    padding: 20px;
+    justify-items: center;
+}
+
+.other-music-item {
+    background-color: #3a3a3a;
+    padding: 25px;
+    border-radius: 16px;
+    color: #e0e0e0;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.other-music-item:hover {
+    background-color: #4a4a4a;
+    transform: scale(1.05);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.other-music-item img {
+    width: 100%;
+    height: 200px;
+    border-radius: 12px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.other-music-item img:hover {
+    transform: scale(1.1);
+}
+
+.other-music-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #f4f4f4;
+    margin-top: 15px;
 }
 
 /* Seção de Lançamentos */
@@ -134,64 +233,3 @@ h2 {
     color: #f4f4f4;
     margin-top: 15px;
 }
-
-/* Rodapé */
-footer {
-    margin-top: 60px;
-    background-color: #261F1F;
-    color: #f4f4f4;
-    padding: 20px;
-    text-align: center;
-    width: 100%;
-}
-/* Outras Músicas */
-.other-music {
-    margin-top: 60px;
-    text-align: center;
-}
-
-.other-music-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    gap: 30px;
-    padding: 20px;
-    justify-items: center;
-}
-
-.other-music-item {
-    background-color: #3a3a3a;
-    padding: 25px;
-    border-radius: 16px;
-    color: #e0e0e0;
-    width: 100%;
-    text-align: center;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
-    cursor: pointer;
-}
-
-.other-music-item:hover {
-    background-color: #4a4a4a;
-    transform: scale(1.05);
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.other-music-item img {
-    width: 100%;
-    height: 200px;
-    border-radius: 12px;
-    object-fit: cover;
-    transition: transform 0.3s;
-}
-
-.other-music-item img:hover {
-    transform: scale(1.1);
-}
-
-.other-music-title {
-    font-size: 20px;
-    font-weight: bold;
-    color: #f4f4f4;
-    margin-top: 15px;
-}
-
